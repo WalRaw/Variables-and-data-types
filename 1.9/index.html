@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Курс JavaScript</title>
+    <script>
+      // 1-9
+      let teacher1 = ['<b>Валишин</b>', '<b>Равиль</b>', '<b>Ильдарович</b>', 'Професор.', 'Высшее.', 'Первая.', 
+		'Многопрофильный колледж МПК.', 'Информатика.', 'Люблю гулять'];
+
+    // 1-10, 1-12,1-11
+    let teacher = {
+			surname: 'Валишин',
+			name: 'Равиль',
+			patronymic: 'Ильдарович',
+			ocupation: '',
+			degree: 'Высшее.',
+			category: 'Первая.',
+			education: ['Многопрофильный колледж МПК','Московский государственный институт электронной техники,'],
+			discipline: ['Информатика;', 'Основы программирования;', 'Инженерная графика.'],
+			note: 'Люблю гулять',
+      };
+	
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1 align="center">Введение в JavaScript</h1>
+    </header>
+
+    <div class="content">
+      <script>
+      // 1-9
+       document.write (
+				'<p>', '<h2>', teacher1[0] + ' ' + teacher1[1] + ' ' + teacher1[2], '</h2>', '</p>' +
+				'<p>', '<big>Должность:</big>' + ' ' + teacher1[3], '</p>' +
+				'<p>', '<big>Уровень образования:</big>' + ' ' + teacher1[4], '</p>' +
+				'<p>', '<big>Категория:</big>' + ' ' + teacher1[5], '</p>' +
+				'<p>', '<big>Образование:</big>' + ' ' + teacher1[6], '</p>' +
+				'<p>', '<big>Дисциплина:</big>' + ' ' + teacher1[7], '</p>' +
+				'<p>', '<big>Примечание:</big>' + ' ' + teacher1[8], '</p>'
+			);
+        // 1-10, 1-11? 1-12
+      document.write (
+				'<p>', '<h2>', teacher.surname + ' ' + teacher.name + ' ' + teacher.patronymic, '</h2>', '</p>' +
+				'<p>', '<i>Должность:</i>' + ' ' + teacher.ocupation, '</p>' +
+				'<p>', '<i>Уровень образования:</i>' + ' ' + teacher.degree, '</p>' +
+				'<p>', '<i>Категория:</i>' + ' ' + teacher.category, '</p>' +
+				'<p>', '<i>Образование:</i>' + ' ' + teacher.education[0] + ' ' + teacher.education[1], '</p>' +
+				'<p>', '<i>Дисциплины:</i>' + ' ' + 
+				'<ul>', '<li>', teacher.discipline[0], '</li>' + '<li>', teacher.discipline[1], '</li>' + '<li>', teacher.discipline[2], '</li>', '</ul>', '</p>' +
+				'<p>', '<i>Примечание:</i>' + ' ' + teacher.note, '</p>'
+			);
+				let line = `
+				<h2> ${teacher.surname} ${teacher.name} ${teacher.patronymic} </h2>
+				<p><i>Должность:</i> ${teacher.ocupation}</p>
+				<p><i>Уровень образования:</i> ${teacher.degree}</p>
+				<p><i>Категория:</i> ${teacher.category}</p>
+				<p><i>Образование:</i> ${teacher.education[0]} ${teacher.education[1]}</p>
+				<p><i>Дисциплины:</i> <ul><li>${teacher.discipline[0]}</li> <li>${teacher.discipline[1]}</li> <li>${teacher.discipline[2]}</li></ul></p>
+				<p><i>Примечание:</i> ${teacher.note}</p>`;
+				document.write(line);
+      
+      </script>
+    </div>
+
+  </body>
+</html>
